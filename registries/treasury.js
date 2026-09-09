@@ -4014,6 +4014,29 @@ const configs = {
       resolveLP: true,
     },
   },
+  'treasury/nukes-fun': {
+    robinhood: {
+      owners: [
+        '0xC1e68163e81628F856aE86a08387dEBE54A3cBA7', // Treasury Safe
+        '0x1b67d44ba7c15ed1da219ac353c401b9fb458248', // GigaDEX Position Vault 1
+        '0x6ebc5bf7efe8fa4a6ad07cb302b274c127da7ca8', // GigaDEX Position Vault 2
+        '0x1dded32eab1b1eee85efc1e2fd9cbb0c59eba606', // GigaDEX Position Vault 3
+        '0xf7982af3daff1b384ce65ea6e94e8251bf97bfae', // GigaDEX Position Vault 4
+        '0x47183964774214745d6173cf459ab4940107851f', // GigaDEX Position Vault 5
+        '0x04bb8381c45b8858c1270bc198ba0049203ad8b9', // GigaDEX Position Vault 6
+      ],
+      tokens: [
+        nullAddress,
+        ADDRESSES.robinhood.USDG,
+        '0xBEF75684C43c4ea7BD18Dd532a2244674Ee8b926', // NNE
+      ],
+      ownTokens: ['0x0000000005aCa17e8bd5779Fc87E13cb433aEd24'], // NUKE
+      resolveUniV3: true,
+      uniV3ExtraConfig: {
+        nftAddress: '0xA79F5775b0B49E51202c48DDF03F380FaA96f641', // GigaDEX Position Manager
+      },
+    },
+  },
   'treasury/neutra-finance': {
     arbitrum: {
       tokens: [
@@ -4419,6 +4442,12 @@ const configs = {
   'treasury/pop-fi': {
     solana: {
       owners: ['D3T38wVYstKhkSLXdYACGor5fGWBiuqWu9VjDp2XoPDB'],
+    },
+  },
+  'treasury/popcorncine': {
+    bsc: {
+      owners: ['0x24a2d2503ed27418d7e5b21b617d4bc03aec55e1'],
+      tokens: [ADDRESSES.bsc.USDT, ADDRESSES.bsc.USDC, nullAddress],
     },
   },
   'treasury/premia': {
@@ -5716,6 +5745,26 @@ const configs = {
       ownTokens: ["0xA36FDBBAE3c9d55a1d67EE5821d53B50B63A1aB9"],
       resolveLP: true,
       resolveUniV3: true,
+    },
+  },
+  'treasury/termix': {
+    // Protocol fee recipient — receives the 2% protocol fee from the escrow and
+    // campaign-vault contracts on both chains.
+    bsc: {
+      owners: ["0x1095deD95CB6e81C01204F7A94950dd559195E42"],
+      fetchCoValentTokens: false,
+      tokens: [
+        ADDRESSES.bsc.USDC,
+        ADDRESSES.bsc.USDT,
+      ],
+    },
+    base: {
+      owners: ["0x1095deD95CB6e81C01204F7A94950dd559195E42"],
+      fetchCoValentTokens: false,
+      tokens: [
+        ADDRESSES.base.USDC,
+        ADDRESSES.base.USDT,
+      ],
     },
   },
   'treasury/thales': {
